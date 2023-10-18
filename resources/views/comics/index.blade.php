@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 @endsection
 
-@section('content')
+@section('index')
     <div class="container">
         <h1 class="mt-5 mb-5">Lista Comics</h1>
 
@@ -25,7 +25,9 @@
                         <th scope="col">{{ $comic->price }}</th>
                         <th scope="col">{{ $comic->sale_date }}</th>
                         <th scope="col">
-
+                            <a href="{{route('comics.show', $comic)}}">
+                                <i class="fa-solid fa-eye"></i>
+                            </a>
                         </th>
                     </tr>
                 @endforeach

@@ -46,9 +46,9 @@ class DcComicsController extends Controller
      * @param  int  $id
 
      */
-    public function show($id)
+    public function show(Comics $comic)
     {
-        //
+        return view('comics.show', compact('comic'));
     }
 
     /**

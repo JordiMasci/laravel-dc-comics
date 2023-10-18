@@ -12,7 +12,7 @@
 
   {{-- fonAwesome --}}
   @yield('fontawesome')
-  
+
   <!-- Styles -->
   @vite('resources/js/app.js')
 </head>
@@ -21,7 +21,8 @@
   @include('partials.header')
 
   <main class="mb-5">
-    @yield('content')
+    @yield('index')
+    @yield('show')
   </main>
   
 </body>
