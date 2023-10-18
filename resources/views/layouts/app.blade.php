@@ -23,6 +23,7 @@
   <main class="mb-5">
     @yield('index')
     @yield('show')
+    @yield('create')
   </main>
   
 </body>

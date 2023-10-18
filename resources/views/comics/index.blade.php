@@ -6,6 +6,10 @@
 
 @section('index')
     <div class="container">
+        <a href="{{route('comics.create')}}" class="btn btn-primary mt-5">
+            Crea nuovo contenuto
+        </a>
+
         <h1 class="mt-5 mb-5">Lista Comics</h1>
 
         <table class="table table-striped">
