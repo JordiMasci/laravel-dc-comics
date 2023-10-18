@@ -16,7 +16,7 @@
 
 <body>
   @include('partials.header')
-  
+  @yield('welcome')
 </body>
 
 </html>

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <h1>Lista Comics</h1>
+        <h1 class="mt-5 mb-5">Lista Comics</h1>
 
         <table class="table table-striped">
             <thead>
