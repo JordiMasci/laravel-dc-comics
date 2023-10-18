@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Comics;
+
 class DcComicsController extends Controller
 {
     /**
@@ -13,7 +15,7 @@ class DcComicsController extends Controller
      */
     public function index()
     {
-        //
+        dd('qui devo visualizzare i comics');
     }
 
     /**

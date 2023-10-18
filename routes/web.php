@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-// use\App\Http\Controllers\DcComicsControllers;
+use App\Http\Controllers\DcComicsController;
 use App\Http\Controllers\PageController;
 
 /*
@@ -17,4 +17,4 @@ use App\Http\Controllers\PageController;
 
 Route::get('/', [PageController::class,'index'])->name('home');
 
-// Route::resource('','');
+Route::resource('comics', DcComicsController::class);
