@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+// IMPORTO IL MODELLO
 use App\Models\Comics;
 
 class DcComicsController extends Controller
@@ -15,7 +16,8 @@ class DcComicsController extends Controller
      */
     public function index()
     {
-        dd('qui devo visualizzare i comics');
+        $comics = Comics::all();
+        dd($comics);
     }
 
     /**
