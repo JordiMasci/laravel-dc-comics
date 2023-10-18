@@ -16,6 +16,10 @@
 
 <body>
   @include('partials.header')
+
+  <main class="mb-5">
+    @yield('content')
+  </main>
   
 </body>
 
