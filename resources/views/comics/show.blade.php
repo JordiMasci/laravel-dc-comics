@@ -3,7 +3,6 @@
 @section('show')
     <div class="container">
         <div class="row">
-
                 <div class="col">
                     {{ $comic->id }}
                 </div>
@@ -16,7 +15,6 @@
                 <div class="col">
                     {{ $comic->sale_date }}
                 </div>
-
         </div>
     </div>
 @endsection
