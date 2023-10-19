@@ -89,8 +89,9 @@ class DcComicsController extends Controller
      * @param  int  $id
 
      */
-    public function destroy($id)
+    public function destroy(Comics $comic)
     {
-        //
+        $comic->delete();
+        return redirect()->route('comics.index', $comic);
     }
 }
