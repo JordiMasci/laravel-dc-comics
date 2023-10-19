@@ -11,7 +11,7 @@
             Modifica
         </a>
 
-        <div class="row">
+        {{-- <div class="row">
             <div class="col">
                 {{ $comic->id }}
             </div>
@@ -24,6 +24,29 @@
             <div class="col">
                 {{ $comic->sale_date }}
             </div>
-        </div>
+        </div> --}}
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Titolo</th>
+                <th scope="col">Prezzo</th>
+                <th scope="col">Data</th>
+                <th scope="col">Serie</th>
+                <th scope="col">Tipo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">{{ $comic->id }}</th>
+                <td>{{ $comic->title }}</td>
+                <td>{{ $comic->price }}</td>
+                <td>{{ $comic->sale_date }}</td>
+                <td>{{ $comic->series }}</td>
+                <td>{{ $comic->type }}</td>
+              </tr>
+            </tbody>
+          </table>
     </div>
 @endsection
