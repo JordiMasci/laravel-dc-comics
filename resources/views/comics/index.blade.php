@@ -47,42 +47,42 @@
                             </a>
 
                             <!-- Button trigger modal -->
-                            <button type="button"  data-bs-toggle="modal"
-                                data-bs-target="#exampleModal">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#delete-modal-{{ $comic->id }}">
                                 <i class="fa-solid fa-trash"></i>
-                            </button>
+                            </a>
 
                             <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                                aria-hidden="true">
+
+                            <div class="modal fade" id="delete-modal-{{ $comic->id }}" tabindex="-1"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminazione</h1>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                 aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            ...
+                                            Vuoi davvero cancellare {{ $comic->title }}?
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                                data-bs-dismiss="modal">Annulla</button>
+
+                                            <form action="{{ route('comics.destroy', $comic) }}" class="mx-2"
+                                                method="POST">
+                                                @csrf
+                                                @method('DELETE')
+
+                                                <button class="btn btn-primary">Elimina</button>
+
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
 
-                            {{-- <form action="{{ route('comics.destroy', $comic) }}" class="mx-2" method="POST">
-                                @csrf
-                                @method('DELETE')
-
-                                <button>
-                                </button>
-
-                            </form> --}}
                         </th>
                     </tr>
                 @endforeach
