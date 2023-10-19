@@ -11,21 +11,6 @@
             Modifica
         </a>
 
-        {{-- <div class="row">
-            <div class="col">
-                {{ $comic->id }}
-            </div>
-            <div class="col">
-                {{ $comic->title }}
-            </div>
-            <div class="col">
-                {{ $comic->price }}
-            </div>
-            <div class="col">
-                {{ $comic->sale_date }}
-            </div>
-        </div> --}}
-
         <table class="table">
             <thead>
               <tr>
