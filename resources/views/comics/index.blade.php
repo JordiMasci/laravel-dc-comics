@@ -37,7 +37,12 @@
                         <th scope="col">{{ $comic->type }}</th>
                         <th scope="col">{{ $comic->series }}</th>
                         <th scope="col">
-                            <a href="{{route('comics.show', $comic)}}">
+
+                            <a href="{{route('comics.edit', $comic)}}" class="mx-2">
+                                <i class="fa-solid fa-pen"></i>
+                            </a>
+
+                            <a href="{{route('comics.show', $comic)}}" class="mx-2">
                                 <i class="fa-solid fa-eye"></i>
                             </a>
                         </th>

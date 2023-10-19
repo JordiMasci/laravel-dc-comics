@@ -7,7 +7,7 @@
             Torna alla lista
         </a>
 
-        <a href="{{ route('comics.show', $comic) }}" class="btn btn-primary mt-5 mb-5">
+        <a href="{{ route('comics.show', $comic) }}" class="btn btn-success mt-5 mb-5">
             mostra i dettagli
         </a>
 

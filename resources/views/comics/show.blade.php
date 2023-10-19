@@ -7,7 +7,7 @@
             Torna alla lista
         </a>
 
-        <a href="{{ route('comics.edit', $comic) }}" class="btn btn-secondary mt-5 mb-5">
+        <a href="{{ route('comics.edit', $comic) }}" class="btn btn-success mt-5 mb-5">
             Modifica
         </a>
 
