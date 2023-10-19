@@ -19,6 +19,10 @@
                     <th scope="col">Titolo</th>
                     <th scope="col">Prezzo</th>
                     <th scope="col">data</th>
+                    {{-- <th scope="col">thumb</th> --}}
+                    {{-- <th scope="col">descrizione</th> --}}
+                    <th scope="col">tipo</th>
+                    <th scope="col">serie</th>
                 </tr>
             </thead>
             <tbody>
@@ -28,6 +32,10 @@
                         <th scope="col">{{ $comic->title }}</th>
                         <th scope="col">{{ $comic->price }}</th>
                         <th scope="col">{{ $comic->sale_date }}</th>
+                        {{-- <th scope="col">{{ $comic->thumb }}</th> --}}
+                        {{-- <th scope="col">{{ $comic->description }}</th> --}}
+                        <th scope="col">{{ $comic->type }}</th>
+                        <th scope="col">{{ $comic->series }}</th>
                         <th scope="col">
                             <a href="{{route('comics.show', $comic)}}">
                                 <i class="fa-solid fa-eye"></i>

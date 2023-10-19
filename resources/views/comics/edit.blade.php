@@ -7,6 +7,10 @@
             Torna alla lista
         </a>
 
+        <a href="{{ route('comics.show', $comic) }}" class="btn btn-primary mt-5 mb-5">
+            mostra i dettagli
+        </a>
+
         <h1 class="mb-5">Modifica contenuto</h1>
 
         <form action="{{ route('comics.update', $comic) }}" method="POST">

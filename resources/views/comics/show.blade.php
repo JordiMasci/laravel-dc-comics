@@ -7,6 +7,10 @@
             Torna alla lista
         </a>
 
+        <a href="{{ route('comics.edit', $comic) }}" class="btn btn-secondary mt-5 mb-5">
+            Modifica
+        </a>
+
         <div class="row">
             <div class="col">
                 {{ $comic->id }}

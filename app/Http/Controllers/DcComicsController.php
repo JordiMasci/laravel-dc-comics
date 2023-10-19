@@ -75,9 +75,12 @@ class DcComicsController extends Controller
      * @param  int  $id
 
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Comics $comic)
     {
-        //
+        $data = $request->all();
+
+        $comic->update($data);
+        return redirect()->route("comics.show", $comic)->with('Il fumetto è stato modificato con successo!');
     }
 
     /**
