@@ -6,7 +6,7 @@
 
 @section('index')
     <div class="container">
-        <a href="{{route('comics.create')}}" class="btn btn-primary mt-5">
+        <a href="{{ route('comics.create') }}" class="btn btn-primary mt-5">
             Crea nuovo contenuto
         </a>
 
@@ -38,19 +38,22 @@
                         <th scope="col">{{ $comic->series }}</th>
                         <th scope="col" class="d-flex">
 
-                            <a href="{{route('comics.edit', $comic)}}" class="mx-2">
+                            <a href="{{ route('comics.edit', $comic) }}" class="mx-2">
                                 <i class="fa-solid fa-pen"></i>
                             </a>
 
-                            <a href="{{route('comics.show', $comic)}}" class="mx-2">
+                            <a href="{{ route('comics.show', $comic) }}" class="mx-2">
                                 <i class="fa-solid fa-eye"></i>
                             </a>
 
-                            <form action="" class="mx-2">
+                            <form action="{{ route('comics.destroy', $comic) }}" class="mx-2" method="POST">
                                 @csrf
                                 @method('DELETE')
 
-                                <i class="fa-solid fa-trash"></i>
+                                <button>
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+
                             </form>
                         </th>
                     </tr>
