@@ -43,7 +43,7 @@ class DcComicsController extends Controller
         $comic->fill($data);
         $comic->save();
 
-        return redirect()->route("comics.create");
+        return redirect()->route("comics.index", $comic)->with('Il fumetto è stato creato con successo!');
     }
 
     /**
@@ -63,9 +63,9 @@ class DcComicsController extends Controller
      * @param  int  $id
 
      */
-    public function edit($id)
+    public function edit(Comics $comic)
     {
-        //
+       return view('comics.edit', compact('comic'));
     }
 
     /**
