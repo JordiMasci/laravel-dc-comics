@@ -36,7 +36,7 @@
                         {{-- <th scope="col">{{ $comic->description }}</th> --}}
                         <th scope="col">{{ $comic->type }}</th>
                         <th scope="col">{{ $comic->series }}</th>
-                        <th scope="col">
+                        <th scope="col" class="d-flex">
 
                             <a href="{{route('comics.edit', $comic)}}" class="mx-2">
                                 <i class="fa-solid fa-pen"></i>
@@ -45,6 +45,13 @@
                             <a href="{{route('comics.show', $comic)}}" class="mx-2">
                                 <i class="fa-solid fa-eye"></i>
                             </a>
+
+                            <form action="" class="mx-2">
+                                @csrf
+                                @method('DELETE')
+
+                                <i class="fa-solid fa-trash"></i>
+                            </form>
                         </th>
                     </tr>
                 @endforeach
